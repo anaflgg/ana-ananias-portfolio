@@ -1,11 +1,53 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/layout.css">
+
     <title>Ana Ananias — Portfólio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+        theme: {
+            extend: {
+            colors: {
+                neon: '#00ff87',
+                'neon-mid': '#00c96b',
+                'neon-dim': 'rgba(0,255,135,0.15)',
+                dark: '#050d0a',
+            },
+            fontFamily: {
+                mono: ['"Space Mono"', 'monospace'],
+                sans: ['"DM Sans"', 'sans-serif'],
+            },
+            },
+        },
+        }
+    </script>
+
 </head>
-<body>
-    
+<body class="min-h-screen text-white">
+    <header class="navbar" role="banner">
+        <nav class="nav-inner" aria-label="Navegação principal">
+            <a href="#home" class="nav-logo" aria-label="Ana Ananias - ir para o início">
+                AA<span class="nav-logo-dot">.dev</span>
+            </a>
+
+            <ul class="nav-links" role="list">
+                <li><a href="#home" class="nav-link" aria-current="page">home</a></li>
+                <li><a href="" class="nav-link">sobre</a></li>
+                <li><a href="" class="nav-link">projetos</a></li>
+                <li><a href="" class="nav-link">contato</a></li>
+            </ul>
+
+            <a href="#contato" class="btn-hire" aria-label="Contrate a Ana">
+                Contrate-me
+            </a>
+        </nav>
+    </header>
 </body>
 </html>

@@ -1,0 +1,33 @@
+:root {
+  --clr-bg: #050d0a;
+  --clr-neon: #00ff87;
+  --clr-neon-mid: #00c96b;
+  --clr-neon-dim: rgba(0, 255, 135, 0.15);
+  --clr-text: rgba(255, 255, 255, 0.85);
+  --clr-text-muted: rgba(255, 255, 255, 0.45);
+
+  --font-mono: 'Space Mono', monospace;
+  --font-sans: 'DM Sans', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--clr-bg);
+    font-family: var(--font-sans);
+    color: var(--clr-text);
+    background-image:
+    linear-gradient(rgba(0, 255, 135, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 135, 0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+}

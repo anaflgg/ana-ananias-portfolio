@@ -14,8 +14,98 @@
   border: 1px solid rgba(0, 255, 135, 0.15);
   box-shadow: 0 0 30px rgba(0, 255, 135, 0.15), inset 0 0 30px rgba(0, 255, 135, 0.03);
 }
+
 .ring-dashed {
   inset: 1.25rem;
-  border: 1px dashed rgba(0, 255, 135, 0.1);
+  border: 1px dashed var(--clr-neon);
+  opacity: 0.2;
   animation: spin 22s linear infinite;
 }
+
+.code-tag {
+  position: absolute;
+  font-family: var(--font-mono);
+  font-size: 0.70rem;
+  color: var(--clr-neon);
+  background: rgba(0, 255, 135, 0.08);
+  border: 1px solid rgba(0, 255, 135, 0.2);
+  padding: 0.2rem 0.7rem;
+  border-radius: 99px;
+  white-space: nowrap;
+}
+
+.code-tag--top {
+    top: -0.5rem;
+    right: -1rem;  
+    animation: float 3s ease-in-out infinite;
+}
+
+.code-tag--right {
+    top: 50%;      
+    right: -3.5rem;  
+    transform: translateY(-50%); 
+    animation: float 3s ease-in-out 0.5s infinite;
+}
+
+.code-tag--bottom {
+    bottom: 1.5rem; 
+    left: -2.5rem;  
+    animation: float 3s ease-in-out 1s infinite;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(1.5rem);
+  animation: fadeUp 0.7s ease forwards;
+  animation-delay: var(--delay, 0s);
+}
+@keyframes fadeUp {
+  to { 
+    opacity: 1; 
+    transform: translateY(0); }
+}
+
+@keyframes blink {
+  50% { 
+    opacity: 0; 
+}
+}
+
+@keyframes pulse-dot {
+  0%, 100% { 
+    opacity: 1; 
+    box-shadow: 0 0 8px rgba(0, 255, 135, 0.7); 
+}
+  50% { 
+    opacity: 0.5; 
+    box-shadow: 0 0 4px rgba(0, 255, 135, 0.3); 
+}
+}
+
+@keyframes spin {
+  to { 
+    transform: rotate(360deg); 
+}
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0); 
+}
+  50%       { 
+    transform: translateY(-8px); 
+}
+}
+
+::-webkit-scrollbar { 
+    width: 4px; 
+}
+
+::-webkit-scrollbar-track { 
+    background: transparent; 
+}
+
+::-webkit-scrollbar-thumb { 
+    background: rgba(0, 255, 135, 0.2); border-radius: 99px; 
+}
+

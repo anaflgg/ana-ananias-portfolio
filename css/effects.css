@@ -4,7 +4,7 @@
   animation: blink 0.75s step-end infinite;
 }
 
-.ring {
+.circle-ring {
   position: absolute;
   border-radius: 50%;
 }
@@ -18,7 +18,7 @@
 .ring-dashed {
   inset: 1.25rem;
   border: 1px dashed var(--clr-neon);
-  opacity: 0.2;
+  opacity: 0.3;
   animation: spin 22s linear infinite;
 }
 

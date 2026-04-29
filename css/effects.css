@@ -1,0 +1,21 @@
+.typewriter::after {
+  content: '|';
+  color: var(--clr-neon);
+  animation: blink 0.75s step-end infinite;
+}
+
+.ring {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.ring-outer {
+  inset: 0;
+  border: 1px solid rgba(0, 255, 135, 0.15);
+  box-shadow: 0 0 30px rgba(0, 255, 135, 0.15), inset 0 0 30px rgba(0, 255, 135, 0.03);
+}
+.ring-dashed {
+  inset: 1.25rem;
+  border: 1px dashed rgba(0, 255, 135, 0.1);
+  animation: spin 22s linear infinite;
+}

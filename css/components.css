@@ -1,0 +1,63 @@
+.btn-primary {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--clr-bg);
+  background: var(--clr-neon);
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+  background: var(--clr-neon-mid);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 255, 135, 0.3);
+}
+
+.btn-outline {
+  font-family: var(--font-mono);
+  font-size: 0.90rem;
+  font-weight: 700;
+  letter-spacing: 0.04rem;
+  color: var(--clr-neon);
+  background: transparent;
+  border: 1px solid rgba(0, 255, 135, 0.35);
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+}
+
+.btn-outline:hover {
+  border-color: var(--clr-neon);
+  background: rgba(0, 255, 135, 0.07);
+  transform: translateY(-2px);
+}
+
+.hero-social {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(0, 255, 135, 0.2);
+  color: rgba(0, 255, 135, 0.55);
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s, background 0.2s, transform 0.2s;
+}
+
+.social-btn:hover {
+  border-color: var(--clr-neon);
+  color: var(--clr-neon);
+  background: var(--clr-neon-ghost);
+  transform: translateY(-2px);
+}

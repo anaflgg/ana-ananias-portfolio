@@ -475,3 +475,10 @@
 .sobre-tittle {
     width: 130px;
 }
+
+.hacker-text {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: rgba(0, 255, 135, 0.4);
+    letter-spacing: 0.1em;
+}

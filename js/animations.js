@@ -38,3 +38,32 @@ function hackerLoop(el) {
 }
 
 if (hackerEl) hackerLoop(hackerEl);
+
+const CHARS = '!<>-_\\/[]{}—=+*^?#@$%&ABCDEFabcdef0123456789';
+
+function randomChar() {
+  return CHARS[Math.floor(Math.random() * CHARS.length)];
+}
+
+function generateGlitchText(length = 12) {
+  return Array.from({ length }, () => randomChar()).join('');
+}
+
+document.querySelectorAll('.skill-card').forEach(card => {
+  const charsEl = card.querySelector('.glitch-chars');
+  let interval = null;
+
+  card.addEventListener('mouseenter', () => {
+    card.classList.add('is-glitching');
+    interval = setInterval(() => {
+      const lines = Array.from({ length: 3 }, () => generateGlitchText(12));
+      charsEl.textContent = lines.join('\n');
+    }, 60);
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.classList.remove('is-glitching');
+    clearInterval(interval);
+    interval = null;
+  });
+});

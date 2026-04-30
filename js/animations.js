@@ -29,9 +29,8 @@ const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$
 const hackerEl = document.querySelector('.hacker-text');
 
 function hackerLoop(el) {
-    const tamanho = 50; 
-
     setInterval(() => {
+        const tamanho = Math.floor(el.offsetWidth / 10);
         el.textContent = Array.from({ length: tamanho }, () =>
             chars[Math.floor(Math.random() * chars.length)]
         ).join('');

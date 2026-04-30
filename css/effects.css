@@ -19,7 +19,7 @@
   inset: 1.25rem;
   border: 1px dashed var(--clr-neon);
   opacity: 0.3;
-  animation: spin 22s linear infinite;
+  animation: spin 18s linear infinite;
 }
 
 .code-tag {

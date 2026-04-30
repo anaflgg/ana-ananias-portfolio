@@ -109,3 +109,44 @@
     background: rgba(0, 255, 135, 0.2); border-radius: 99px; 
 }
 
+.glitch-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 1rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.1s;
+}
+
+.glitch-chars {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--clr-neon);
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    text-align: center;
+    white-space: pre;
+}
+
+.glitch-label {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    color: rgba(0, 255, 135, 0.6);
+}
+
+.skill-card.is-glitching .skill-icon {
+    opacity: 0;
+}
+
+.skill-card.is-glitching .skill-name {
+    opacity: 0;
+}
+
+.skill-card.is-glitching .glitch-overlay {
+    opacity: 1;
+}

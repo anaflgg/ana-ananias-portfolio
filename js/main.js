@@ -163,3 +163,22 @@ backdrop.addEventListener('click', e => {
 document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && !backdrop.hidden) closeModal();
 });
+
+const btnMenu = document.getElementById('btnMenu');
+const mobileMenu = document.getElementById('mobileMenu');
+
+btnMenu.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    btnMenu.classList.toggle('open', isOpen);
+    btnMenu.setAttribute('aria-expanded', isOpen);
+    mobileMenu.setAttribute('aria-hidden', !isOpen);
+});
+
+document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        btnMenu.classList.remove('open');
+        btnMenu.setAttribute('aria-expanded', false);
+        mobileMenu.setAttribute('aria-hidden', true);
+    });
+});

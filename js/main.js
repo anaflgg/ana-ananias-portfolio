@@ -12,8 +12,8 @@ const projectsData = [
             'Dark mode com Tailwind e toggle de classe',
             'Modal dinâmico com dados detalhados via múltiplos endpoints da API',
         ],
-        live: 'https://seu-deploy.com',
-        code: 'https://github.com/seu-usuario/pokedex',
+        live: 'https://anaflgg.github.io/pokedex-ui-api/',
+        code: 'https://github.com/anaflgg/pokedex-ui-api',
     },
 
     {
@@ -29,8 +29,8 @@ const projectsData = [
             'Upload de currículo com controle de tipo e tamanho de arquivo',
             'Persistência de dados em JSON e armazenamento de arquivos no servidor',
         ],
-        live: 'https://seu-deploy.com',
-        code: 'https://github.com/seu-usuario/calculadora-imc',
+        live: 'https://nexus-talent-pool.infinityfreeapp.com/?i=1',
+        code: 'https://github.com/anaflgg/nexus-talent-pool',
     },
 
     {
@@ -46,8 +46,8 @@ const projectsData = [
             'Interface dinâmica com renderização e manipulação do DOM',
             'Animações visuais com CSS e feedback interativo ao usuário',
         ],
-        live: 'https://seu-deploy.com',
-        code: 'https://github.com/seu-usuario/calculadora-imc',
+        live: 'https://anaflgg.github.io/pomodoro-focus-spell/',
+        code: 'https://github.com/anaflgg/pomodoro-focus-spell',
     },
 
     {
@@ -63,8 +63,8 @@ const projectsData = [
             'Galeria de imagens em carrossel dentro de modais',
             'Layout responsivo com Bootstrap 5',
         ],
-        live: 'https://seu-deploy.com',
-        code: 'https://github.com/seu-usuario/gatinhos',
+        live: 'https://anaflgg.github.io/historia_dos_meus_gatos/',
+        code: 'https://github.com/anaflgg/historia_dos_meus_gatos',
     },
 
     {
@@ -80,8 +80,8 @@ const projectsData = [
             'Modal interativo com overlay e efeito de blur',
             'Alteração de estilos com base na categoria do resultado',
         ],
-        live: 'https://seu-deploy.com',
-        code: 'https://github.com/seu-usuario/calculadora-imc',
+        live: 'https://anaflgg.github.io/bmi-calculator-js/',
+        code: 'https://github.com/anaflgg/bmi-calculator-js',
     },
    
 ];

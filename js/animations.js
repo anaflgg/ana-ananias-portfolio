@@ -89,3 +89,89 @@ cards.forEach(card => {
     }, 80);
   });
 });
+
+(function () {
+    const terminal     = document.getElementById('contactTerminal');
+    const linesEl      = document.getElementById('terminalLines');
+    const content      = document.getElementById('contactContent');
+    const section      = document.getElementById('contato');
+
+    if (!terminal || !content || !section) return;
+
+    const LINES = [
+        { text: '> iniciando conexão segura...', cls: '' },
+        { text: '> criptografando canal...', cls: 'is-dim' },
+        { text: '> protocolo: TLS 1.3 ✓', cls: 'is-dim' },
+        { text: '> localizando destino: ana@dev', cls: '' },
+        { text: '> verificando disponibilidade...', cls: '' },
+        { text: '> status: ONLINE', cls: 'is-success' },
+        { text: '> portas abertas: email / linkedin / github', cls: 'is-dim' },
+        { text: '> conexão estabelecida ✓', cls: 'is-success' },
+    ];
+
+    const LINE_DELAY   = 180; 
+    const HOLD_AFTER   = 400;  
+    const FADE_DURATION = 300; 
+
+    let hasRun = false;
+
+    function typeLine(line, index) {
+        return new Promise(resolve => {
+            setTimeout(() => {
+                const el = document.createElement('div');
+                el.className = `terminal-line ${line.cls}`;
+                el.innerHTML = line.text;
+                linesEl.appendChild(el);
+                resolve();
+            }, index * LINE_DELAY);
+        });
+    }
+
+    async function runTerminal() {
+        if (hasRun) return;
+        hasRun = true;
+
+        terminal.classList.add('is-visible');
+
+        for (let i = 0; i < LINES.length; i++) {
+            await typeLine(LINES[i], i);
+        }
+
+        await new Promise(r => setTimeout(r, HOLD_AFTER + LINES.length * LINE_DELAY));
+
+        terminal.classList.add('is-hiding');
+
+        setTimeout(() => {
+            terminal.style.display = 'none';
+            content.classList.add('is-visible');
+        }, FADE_DURATION);
+    }
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    runTerminal();
+                    observer.disconnect();
+                }
+            });
+        },
+        { threshold: 0.25 }
+    );
+
+    observer.observe(section);
+})();
+
+function copyEmail(event, el) {
+    event.preventDefault();
+    navigator.clipboard.writeText('anaflaviananias3@gmail.com').then(() => {
+        const sub = el.querySelector('.contact-card-sub');
+        const original = sub.textContent;
+        sub.textContent = 'copiado! ✓';
+        sub.style.color = 'var(--clr-neon)';
+        setTimeout(() => {
+            sub.textContent = original;
+            sub.style.color = '';
+        }, 2000);
+    });
+}

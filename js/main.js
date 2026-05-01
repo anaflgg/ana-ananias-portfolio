@@ -1,3 +1,5 @@
+//  PROJECTS DATA  //
+
 const projectsData = [
     {
         num: '01',
@@ -15,12 +17,11 @@ const projectsData = [
         live: 'https://anaflgg.github.io/pokedex-ui-api/',
         code: 'https://github.com/anaflgg/pokedex-ui-api',
     },
-
     {
         num: '02',
         name: 'Banco de Talentos Nexus',
         image: '../assets/img/projects/talent-pool-nexus-print-desktop.png',
-        descShort: 'CLanding page de banco de talentos com formulário validado no front e back-end, armazenamento em JSON e suporte a envio de currículo.',
+        descShort: 'Landing page de banco de talentos com formulário validado no front e back-end, armazenamento em JSON e suporte a envio de currículo.',
         descLong: 'Landing page de banco de talentos para desenvolvedores, com formulário de candidatura completo. O formulário valida os dados no front e no back, salva candidatos em JSON e armazena o currículo enviado.',
         tags: ['HTML', 'Tailwind', 'CSS', 'JavaScript', 'PHP', 'JSON'],
         highlights: [
@@ -32,7 +33,6 @@ const projectsData = [
         live: 'https://nexus-talent-pool.infinityfreeapp.com/?i=1',
         code: 'https://github.com/anaflgg/nexus-talent-pool',
     },
-
     {
         num: '03',
         name: 'Pomodoro Focus Spell',
@@ -49,7 +49,6 @@ const projectsData = [
         live: 'https://anaflgg.github.io/pomodoro-focus-spell/',
         code: 'https://github.com/anaflgg/pomodoro-focus-spell',
     },
-
     {
         num: '04',
         name: 'História dos Meus Gatinhos',
@@ -66,7 +65,6 @@ const projectsData = [
         live: 'https://anaflgg.github.io/historia_dos_meus_gatos/',
         code: 'https://github.com/anaflgg/historia_dos_meus_gatos',
     },
-
     {
         num: '05',
         name: 'Calculadora de IMC',
@@ -83,8 +81,9 @@ const projectsData = [
         live: 'https://anaflgg.github.io/bmi-calculator-js/',
         code: 'https://github.com/anaflgg/bmi-calculator-js',
     },
-   
 ];
+
+//  MODAL — ELEMENTOS  //
 
 const backdrop   = document.getElementById('projModalBackdrop');
 const closeBtn   = document.getElementById('projModalClose');
@@ -94,10 +93,11 @@ const modalDesc  = document.getElementById('modalDesc');
 const modalTags  = document.getElementById('modalTags');
 const modalHL    = document.getElementById('modalHighlights');
 const modalHLSec = document.getElementById('modalHighlightsSection');
-const modalEmoji = document.getElementById('modalEmoji');
 const modalThumb = document.getElementById('modalThumb');
 const modalLive  = document.getElementById('modalLive');
 const modalCode  = document.getElementById('modalCode');
+
+//  MODAL — ABRIR / FECHAR  //
 
 function openModal(index) {
     const p = projectsData[index];
@@ -109,11 +109,9 @@ function openModal(index) {
     modalLive.href         = p.live || '#';
     modalCode.href         = p.code || '#';
 
-    if (p.image) {
-        modalThumb.innerHTML = `<img src="${p.image}" alt="${p.name}">`;
-    } else {
-        modalThumb.innerHTML = `<span id="modalEmoji">${p.emoji}</span>`;
-    }
+    modalThumb.innerHTML = p.image
+        ? `<img src="${p.image}" alt="${p.name}">`
+        : `<span>${p.emoji}</span>`;
 
     modalTags.innerHTML = p.tags
         .map(t => `<span class="project-tag">${t}</span>`)
@@ -121,9 +119,7 @@ function openModal(index) {
 
     if (p.highlights && p.highlights.length) {
         modalHLSec.hidden = false;
-        modalHL.innerHTML = p.highlights
-            .map(h => `<li>${h}</li>`)
-            .join('');
+        modalHL.innerHTML = p.highlights.map(h => `<li>${h}</li>`).join('');
     } else {
         modalHLSec.hidden = true;
     }
@@ -138,18 +134,19 @@ function closeModal() {
     document.body.style.overflow = '';
 }
 
+//  MODAL — EVENTOS  //
+
 document.querySelectorAll('.project-card').forEach(card => {
+    card.setAttribute('tabindex', '0');
+
     card.addEventListener('click', () => {
-        const idx = parseInt(card.dataset.project, 10);
-        openModal(idx);
+        openModal(parseInt(card.dataset.project, 10));
     });
 
-    card.setAttribute('tabindex', '0');
     card.addEventListener('keydown', e => {
         if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
-            const idx = parseInt(card.dataset.project, 10);
-            openModal(idx);
+            openModal(parseInt(card.dataset.project, 10));
         }
     });
 });
@@ -164,7 +161,9 @@ document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && !backdrop.hidden) closeModal();
 });
 
-const btnMenu = document.getElementById('btnMenu');
+//  NAVBAR — MOBILE MENU  //
+
+const btnMenu    = document.getElementById('btnMenu');
 const mobileMenu = document.getElementById('mobileMenu');
 
 btnMenu.addEventListener('click', () => {

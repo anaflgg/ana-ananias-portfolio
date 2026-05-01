@@ -4,6 +4,7 @@
   animation: blink 0.75s step-end infinite;
 }
 
+/* efeito ring envolta da foto */
 .circle-ring {
   position: absolute;
   border-radius: 50%;
@@ -22,6 +23,7 @@
   animation: spin 18s linear infinite;
 }
 
+/* efeito tags em volta da foto */
 .code-tag {
   position: absolute;
   font-family: var(--font-mono);
@@ -53,48 +55,51 @@
     animation: float 3s ease-in-out 1s infinite;
 }
 
+/* efeitos de fade-up no projeto */
 .fade-up {
   opacity: 0;
   transform: translateY(1.5rem);
   animation: fadeUp 0.7s ease forwards;
   animation-delay: var(--delay, 0s);
 }
+
 @keyframes fadeUp {
   to { 
     opacity: 1; 
-    transform: translateY(0); }
+    transform: translateY(0); 
+  }
 }
 
 @keyframes blink {
   50% { 
     opacity: 0; 
-}
+  }
 }
 
 @keyframes pulse-dot {
   0%, 100% { 
     opacity: 1; 
     box-shadow: 0 0 8px rgba(0, 255, 135, 0.7); 
-}
+  }
   50% { 
     opacity: 0.5; 
     box-shadow: 0 0 4px rgba(0, 255, 135, 0.3); 
-}
+  }
 }
 
 @keyframes spin {
   to { 
     transform: rotate(360deg); 
-}
+  }
 }
 
 @keyframes float {
   0%, 100% { 
     transform: translateY(0); 
-}
-  50%       { 
+  }
+  50% { 
     transform: translateY(-8px); 
-}
+  }
 }
 
 ::-webkit-scrollbar { 
@@ -106,9 +111,11 @@
 }
 
 ::-webkit-scrollbar-thumb { 
-    background: rgba(0, 255, 135, 0.2); border-radius: 99px; 
+    background: rgba(0, 255, 135, 0.2); 
+    border-radius: 99px; 
 }
 
+/* efeito de glitch em skills */
 .glitch-overlay {
     position: absolute;
     inset: 0;
@@ -149,4 +156,70 @@
 
 .skill-card.is-glitching .glitch-overlay {
     opacity: 1;
+}
+
+/* efeito de glitch em cards da sessão projetos */
+.project-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before,
+.project-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.project-card::before {
+  background: rgba(255, 0, 60, 0.15);
+  mix-blend-mode: screen;
+}
+
+.project-card::after {
+  background: rgba(0, 255, 255, 0.15);
+  mix-blend-mode: screen;
+}
+
+.project-card.glitch-active::before {
+  opacity: 1;
+  animation: glitchTop 0.3s;
+}
+
+.project-card.glitch-active::after {
+  opacity: 1;
+  animation: glitchBottom 0.3s;
+}
+
+.project-card.glitch-active {
+  animation: glitchShake 0.15s;
+}
+
+@keyframes glitchTop {
+  0% { transform: translate(0); clip-path: inset(0 0 85% 0); }
+  20% { transform: translate(-4px, -2px); clip-path: inset(10% 0 60% 0); }
+  40% { transform: translate(4px, 2px); clip-path: inset(30% 0 40% 0); }
+  60% { transform: translate(-3px, 1px); clip-path: inset(50% 0 20% 0); }
+  80% { transform: translate(3px, -1px); clip-path: inset(70% 0 10% 0); }
+  100% { transform: translate(0); clip-path: inset(0 0 85% 0); }
+}
+
+@keyframes glitchBottom {
+  0% { transform: translate(0); clip-path: inset(85% 0 0 0); }
+  20% { transform: translate(4px, 2px); clip-path: inset(60% 0 10% 0); }
+  40% { transform: translate(-4px, -2px); clip-path: inset(40% 0 30% 0); }
+  60% { transform: translate(3px, -1px); clip-path: inset(20% 0 50% 0); }
+  80% { transform: translate(-3px, 1px); clip-path: inset(10% 0 70% 0); }
+  100% { transform: translate(0); clip-path: inset(85% 0 0 0); }
+}
+
+@keyframes glitchShake {
+  0% { transform: translate(1px, 1px); }
+  25% { transform: translate(-1px, 2px); }
+  50% { transform: translate(2px, -1px); }
+  75% { transform: translate(-2px, -1px); }
+  100% { transform: translate(1px, -2px); }
 }

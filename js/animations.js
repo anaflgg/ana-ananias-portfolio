@@ -67,3 +67,25 @@ document.querySelectorAll('.skill-card').forEach(card => {
     interval = null;
   });
 });
+
+const cards = document.querySelectorAll('.project-card');
+
+cards.forEach(card => {
+  let isGlitching = false;
+
+  card.addEventListener('mouseenter', () => {
+    if (isGlitching) return;
+
+    isGlitching = true;
+
+    setTimeout(() => {
+      card.classList.add('glitch-active');
+
+      setTimeout(() => {
+        card.classList.remove('glitch-active');
+        isGlitching = false;
+      }, 300);
+
+    }, 80);
+  });
+});

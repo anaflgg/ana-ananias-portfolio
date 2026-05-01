@@ -4,7 +4,7 @@ const projectsData = [
     {
         num: '01',
         name: 'Pokédex UI',
-        image: '/assets/img/projects/pokedex-image-modal.png',
+        image: './assets/img/projects/pokedex-image-modal.png',
         descShort: 'Aplicação que consome a PokeAPI com busca em tempo real, dark mode e carregamento progressivo.',
         descLong: 'Aplicação que consome a PokeAPI utilizando fetch e async/await, com busca em tempo real por nome ou número, dark mode, carregamento progressivo com paginação e renderização dinâmica de dados no DOM.',
         tags: ['HTML', 'Tailwind CSS', 'JavaScript', 'API', 'fetch/async-await'],
@@ -20,7 +20,7 @@ const projectsData = [
     {
         num: '02',
         name: 'Banco de Talentos Nexus',
-        image: '/assets/img/projects/talent-pool-nexus-print-desktop.png',
+        image: './assets/img/projects/talent-pool-nexus-print-desktop.png',
         descShort: 'Landing page de banco de talentos com formulário validado no front e back-end, armazenamento em JSON e suporte a envio de currículo.',
         descLong: 'Landing page de banco de talentos para desenvolvedores, com formulário de candidatura completo. O formulário valida os dados no front e no back, salva candidatos em JSON e armazena o currículo enviado.',
         tags: ['HTML', 'Tailwind', 'CSS', 'JavaScript', 'PHP', 'JSON'],
@@ -36,7 +36,7 @@ const projectsData = [
     {
         num: '03',
         name: 'Pomodoro Focus Spell',
-        image: '/assets/img/projects/pomodoro-print-desktop.png',
+        image: './assets/img/projects/pomodoro-print-desktop.png',
         descShort: 'Pomodoro temático com modos de sessão, animações visuais e salvamento automático do progresso via localStorage.',
         descLong: 'Pomodoro temático com modos de foco personalizados, controle de sessões em tempo real e salvamento automático no navegador. Possui interface dinâmica com animações e layout responsivo.',
         tags: ['HTML', 'CSS', 'JavaScript'],
@@ -52,7 +52,7 @@ const projectsData = [
     {
         num: '04',
         name: 'História dos Meus Gatinhos',
-        image: '/assets/img/projects/irmaos-gatinhos.desktop.png',
+        image: './assets/img/projects/irmaos-gatinhos.desktop.png',
         descShort: 'SPA responsiva com animações ao scroll, cards interativos e modais, construída com Bootstrap 5.',
         descLong: 'Página interativa desenvolvida para apresentar histórias e características de forma visual e dinâmica. Possui efeitos de animação ao rolar a página, cards interativos com efeito flip, galerias de imagens em modal e layout totalmente responsivo.',
         tags: ['HTML', 'CSS', 'Bootstrap', 'AOS'],
@@ -68,7 +68,7 @@ const projectsData = [
     {
         num: '05',
         name: 'Calculadora de IMC',
-        image: '/assets/img/projects/calculadora-img-modal.png',
+        image: './assets/img/projects/calculadora-img-modal.png',
         descShort: 'Calculadora de IMC com validação de inputs e modal dinâmico que varia conforme o resultado.',
         descLong: 'Calculadora de IMC desenvolvida com JavaScript puro que recebe peso e altura, realiza o cálculo e exibe o resultado em um modal interativo. O sistema aplica mudanças visuais dinâmicas conforme a categoria do IMC, além de incluir validação de dados e manipulação do DOM para controle de interface.',
         tags: ['HTML', 'CSS', 'JavaScript'],

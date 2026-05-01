@@ -1,3 +1,7 @@
+.typewriter {
+  color: var(--clr-text);
+}
+
 .typewriter::after {
   content: '|';
   color: var(--clr-neon);

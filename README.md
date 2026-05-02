@@ -1,6 +1,6 @@
 # Ana Ananias — Portfólio 💻
 
-![Status do Projeto](https://img.shields.io/badge/status-concluindo-yellow)
+![Status do Projeto](https://img.shields.io/badge/status-concluído-brightgreen)
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/layout-hero.css">
     <link rel="stylesheet" href="./css/layout-about.css">
     <link rel="stylesheet" href="./css/layout-skills.css">
+    <link rel="stylesheet" href="./css/layout-experience.css">
     <link rel="stylesheet" href="./css/layout-projects.css">
     <link rel="stylesheet" href="./css/layout-contact.css">
     <link rel="stylesheet" href="./css/effects.css">
@@ -429,11 +430,105 @@
             </div>
         </section>
 
+<section id="experiencia" class="experience-section fade-up" style="--delay: 0.1s" aria-labelledby="exp-heading">
+
+    <header class="sobre-header">
+        <span class="badge badge-experience">04. experiências</span>
+        <h2 id="exp-heading" class="sobre-titulo">
+            Minha <span class="sobre-titulo-destaque">atuação</span>
+        </h2>
+        <div class="sobre-linha" aria-hidden="true"></div>
+    </header>
+
+    <article class="exp-card">
+
+        <div class="exp-card-top">
+            <h3 class="exp-title">Marketplace Odontológico</h3>
+            <span class="exp-status">
+                <span class="exp-status-dot" aria-hidden="true"></span>
+                em andamento
+            </span>
+        </div>
+
+        <span class="exp-role">Desenvolvedora Front-end &nbsp;·&nbsp; Projeto Real de Cliente</span>
+
+        <div class="exp-divider" aria-hidden="true"></div>
+
+        <p class="exp-desc">
+            Meu irmão sênior me deu a oportunidade de trabalhar com ele num produto real:
+            a recriação do único marketplace odontológico do Brasil, substituindo uma plataforma
+            antiga por uma solução moderna. Trabalhamos no mesmo repositório — eu responsável
+            pelo front-end, ele focado no back-end e banco de dados.
+        </p>
+        <p class="exp-desc">
+            Criei a identidade visual no <strong>Figma</strong>, desenvolvi componentes
+            <strong>React</strong> com rotas otimizadas em <strong>Next.js</strong> e tipagem
+            em <strong>TypeScript</strong>. Trabalhei com <strong>Git</strong> na minha própria
+            branch, abrindo <strong>pull requests</strong> para revisão do meu irmão antes de
+            cada merge. Consumi os endpoints da API, validei payloads no <strong>Insomnia</strong>
+            e cheguei a solicitar ajustes na API para buscar dados do usuário cadastrado. Usei o
+            <strong>MySQL Workbench</strong> para analisar o banco e entender as regras de negócio.
+            Durante o desenvolvimento, utilizei o <strong>Claude Code</strong> como assistente
+            no terminal para acelerar a escrita de componentes e resolver problemas mais rápido.
+        </p>
+
+        <div class="exp-tags" role="list" aria-label="Tecnologias utilizadas">
+            <span class="exp-tag" role="listitem">TypeScript</span>
+            <span class="exp-tag" role="listitem">React.js</span>
+            <span class="exp-tag" role="listitem">Next.js</span>
+            <span class="exp-tag" role="listitem">Tailwind</span>
+            <span class="exp-tag" role="listitem">Git</span>
+            <span class="exp-tag" role="listitem">Figma</span>
+            <span class="exp-tag" role="listitem">API REST</span>
+            <span class="exp-tag" role="listitem">Insomnia</span>
+            <span class="exp-tag" role="listitem">MySQL Workbench</span>
+            <span class="exp-tag" role="listitem">Claude Code</span>
+        </div>
+
+        <p class="exp-gallery-label">prints do projeto</p>
+
+        <div class="exp-gallery" role="list" aria-label="Galeria de imagens do projeto">
+
+            <!-- Imagem 1 -->
+            <div class="exp-img-wrapper" role="listitem">
+                <img src="./assets/img/experiencias/5-vs-code.png"
+                     alt="Protótipo da identidade visual no Figma"
+                     loading="lazy"
+                     onerror="this.parentElement.innerHTML='<div class=\'exp-img-placeholder\'><svg width=\'28\' height=\'28\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\' viewBox=\'0 0 24 24\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><path d=\'m21 15-5-5L5 21\'/></svg><span>Figma</span></div>'">
+                <span class="exp-img-caption">VS Code — TypeScript & Git</span>
+            </div>
+
+            <!-- Imagem 2 -->
+            <div class="exp-img-wrapper" role="listitem">
+                <img src="./assets/img/experiencias/2-tela-inicial.png"
+                     alt="Interface do marketplace no navegador"
+                     loading="lazy"
+                     onerror="this.parentElement.innerHTML='<div class=\'exp-img-placeholder\'><svg width=\'28\' height=\'28\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\' viewBox=\'0 0 24 24\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><path d=\'m21 15-5-5L5 21\'/></svg><span>Front-end</span></div>'">
+                <span class="exp-img-caption">React.js — Interface</span>
+            </div>
+
+            <!-- Imagem 3 -->
+            <div class="exp-img-wrapper" role="listitem">
+                <img src="./assets/img/experiencias/4-teste-api.png"
+                     alt="Análise de dados no MySQL Workbench"
+                     loading="lazy"
+                     onerror="this.parentElement.innerHTML='<div class=\'exp-img-placeholder\'><svg width=\'28\' height=\'28\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\' viewBox=\'0 0 24 24\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><path d=\'m21 15-5-5L5 21\'/></svg><span>MySQL Workbench</span></div>'">
+                <span class="exp-img-caption">Insomnia — Teste de requisições</span>
+            </div>
+
+        </div>
+
+        <span class="exp-gallery-scroll-hint" aria-hidden="true">← arraste para ver mais →</span>
+
+    </article>
+
+</section>
+
         <section id="projects" class="projects-section" aria-labelledby="projects-heading">
             <div class="projects-inner">
 
                 <header class="projects-header fade-up" style="--delay: 0.1s">
-                    <span class="badge">04. projetos</span>
+                    <span class="badge">05. projetos</span>
                     <h2 id="projects-heading" class="projects-titulo">
                         O que eu <span class="projects-titulo-destaque">construí</span>
                     </h2>
@@ -619,7 +714,7 @@
         <div class="contact-inner">
 
             <header class="contact-header fade-up" style="--delay: 0s">
-                <span class="badge">05. contato</span>
+                <span class="badge">06. contato</span>
                 <h2 id="contact-heading" class="contact-titulo">
                     Vamos <span class="contact-titulo-destaque">conversar?</span>
                 </h2>

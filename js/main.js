@@ -3,6 +3,23 @@
 const projectsData = [
     {
         num: '01',
+        name: 'MotoLog Gestão de Entregas',
+        image: './assets/img/projects/print-4.jpeg',
+        descShort: 'Sistema web de gestão de entregas para farmácias. Do papel e caneta ao banco de dados — tabela diária, histórico, acerto com motoboy e CRUD completo.',
+        descLong: 'Sistema fullstack criado para resolver um problema real vivido no trabalho como operadora de caixa. Substitui o controle manual em papel por um dashboard digital com autenticação, tabela diária de entregas, histórico por dia, modal de edição, acerto com motoboy e status em tempo real. Desenvolvido com Next.js App Router, TypeScript, Tailwind CSS e Supabase.',
+        tags: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Supabase', 'PostgreSQL'],
+        highlights: [
+            'Autenticação completa com Supabase Auth e Row Level Security',
+            'Banco de dados relacional PostgreSQL com trigger automático de perfil',
+            'Roteamento dinâmico com App Router do Next.js',
+            'CRUD completo com modal de edição e atualização em tempo real',
+        ],
+        live: 'https://motolog-delivery-management.vercel.app/login',
+        code: 'https://github.com/anaflgg/motolog-delivery-management',
+    },
+
+    {
+        num: '02',
         name: 'Pokédex UI',
         image: './assets/img/projects/pokedex-image-modal.png',
         descShort: 'Aplicação que consome a PokeAPI com busca em tempo real, dark mode e carregamento progressivo.',
@@ -18,7 +35,7 @@ const projectsData = [
         code: 'https://github.com/anaflgg/pokedex-ui-api',
     },
     {
-        num: '02',
+        num: '03',
         name: 'Banco de Talentos Nexus',
         image: './assets/img/projects/talent-pool-nexus-print-desktop.png',
         descShort: 'Landing page de banco de talentos com formulário validado no front e back-end, armazenamento em JSON e suporte a envio de currículo.',
@@ -34,7 +51,7 @@ const projectsData = [
         code: 'https://github.com/anaflgg/nexus-talent-pool',
     },
     {
-        num: '03',
+        num: '04',
         name: 'Pomodoro Focus Spell',
         image: './assets/img/projects/pomodoro-print-desktop.png',
         descShort: 'Pomodoro temático com modos de sessão, animações visuais e salvamento automático do progresso via localStorage.',
@@ -50,7 +67,7 @@ const projectsData = [
         code: 'https://github.com/anaflgg/pomodoro-focus-spell',
     },
     {
-        num: '04',
+        num: '05',
         name: 'História dos Meus Gatinhos',
         image: './assets/img/projects/irmaos-gatinhos.desktop.png',
         descShort: 'SPA responsiva com animações ao scroll, cards interativos e modais, construída com Bootstrap 5.',
@@ -65,22 +82,7 @@ const projectsData = [
         live: 'https://anaflgg.github.io/historia_dos_meus_gatos/',
         code: 'https://github.com/anaflgg/historia_dos_meus_gatos',
     },
-    {
-        num: '05',
-        name: 'Calculadora de IMC',
-        image: './assets/img/projects/calculadora-img-modal.png',
-        descShort: 'Calculadora de IMC com validação de inputs e modal dinâmico que varia conforme o resultado.',
-        descLong: 'Calculadora de IMC desenvolvida com JavaScript puro que recebe peso e altura, realiza o cálculo e exibe o resultado em um modal interativo. O sistema aplica mudanças visuais dinâmicas conforme a categoria do IMC, além de incluir validação de dados e manipulação do DOM para controle de interface.',
-        tags: ['HTML', 'CSS', 'JavaScript'],
-        highlights: [
-            'Cálculo de IMC com validação de entradas em JavaScript',
-            'Manipulação do DOM para exibição dinâmica de resultados',
-            'Modal interativo com overlay e efeito de blur',
-            'Alteração de estilos com base na categoria do resultado',
-        ],
-        live: 'https://anaflgg.github.io/bmi-calculator-js/',
-        code: 'https://github.com/anaflgg/bmi-calculator-js',
-    },
+        
 ];
 
 //  MODAL — ELEMENTOS  //
